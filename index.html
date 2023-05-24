@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styletema2.1.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Proiect TW</title>
 </head>
 <body class="principal">
@@ -80,7 +80,7 @@
             <p>„The Menu / Meniul” spune povestea unui cuplu, format din Margot și Tyler, care călătorește pe o insulă de coastă din nord-vestul Pacificului pentru a participa la o degustare la un restaurant exclusivist, Hawthorn. Acolo, chef este un celebru bucătar retras acum, Julian Slowik, care a pregătit un meniu generos pentru oaspeți speciali selecționați. </p>
             <p>Cuplului i se alătură trei frați tineri, aflați deja în stare de ebrietate, Bryce, Soren și Dave, un cuplu bogat mai în vârstă și clienții Anne și Richard, renumitul critic de restaurante Lillian Bloom și editorul ei servil Ted și un celebru star de cinema de vârstă mijlocie, alături de asistenta sa Felicity.</p>
             <p>Mesenii devin, fără să vrea, degustători de alimente cu aspect deosebit de ciudat. Ceea ce este un restaurant rafinat pare mai degrabă un cult, cu chef Slowick șeful unei echipe de bucătari care strigă „Da, chef!” într-un mod posedat. Astfel iese la iveală că meniul din ce în ce mai ciudat nu este decât un preambul pentru un final cu totul șocant.</p>
-            <p class="important">Pagina oficiala IMDb a filmului se poate gasi <a href="https://www.imdb.com/title/tt9764362/">aici</a>.</p>
+            <p class="important">Pagina oficiala Wikipedia a filmului se poate gasi <a href="https://en.wikipedia.org/wiki/The_Menu_(2022_film)">aici</a>.</p>
         </p>
         <!--Distributia filmului-->
         <p id="distributia">
@@ -115,10 +115,10 @@
                 <img src="poze/poza4.jpg" alt="A patra poza" width="250" height="200">
                 <img src="poze/poza5.jpg" alt="A cincea poza" width="250" height="200">
             </p>
-            <p class="important">More photos <a href="https://www.imdb.com/title/tt9764362/mediaindex?ref_=tt_ov_mi_sm">here</a></p>
+            <p class="important">More photos <a href="https://en.wikipedia.org/wiki/The_Menu_(2022_film)">here</a></p>
             <h3>Trailer</h3>
             <p>
-                <iframe width="500" height="300" src="https://www.youtube.com/embed/C_uTkUGcHv4" title="THE MENU | Official Trailer | Searchlight Pictures" ></iframe>
+                <iframe width="885" height="498" src="https://www.youtube.com/embed/quU9Jax1alk" title="Meniul | The menu (2022) - TRAILER subtitrat română" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </p>
         </p>
     </main>
@@ -138,21 +138,39 @@
             <span><b>I tried to chew but couldn't swallow.</b><i> julieshotmail</i></span>
             <p>" "The Menu" offers a trailer spectacular enough to entice me to set foot in a physical movie theater for the first time in 3 years. Packed with both veteran and burgeoning actors and directed by Mark Mylod of "Succession" fame, this movie has all the goodies to entertain you and make you think at the same time, supposedly. It starts out well enough, introducing quirky mysterious characters starting with Elsa played by Hong Chau. I find her really captivating in this role, a perfect combo of politeness and menace. Why is she dressed like that? Then we meet the Chef who has an agenda that unravels through the perspective of Margot, played by the always-awesome Anya Taylor-Joy. Margot is us, wanting to expose the ridiculousness of it all. Yet herein lies the problem with the movie. Its effort as a biting satire turns into a confusing mess at the end. "The Menu" could have given us something to chew on, instead I walk out of the movie theater scratching my head."</p>
         </section>
-        <section>
+        <div id="container">
+            <div class="box">
+              <h2>Click me! Let's play!</h2>
+            </div>
+        </div>
+        <span>
             <h2>Contact Us</h2>
             <form id="contact-form">
               <label for="name">Name:</label>
               <input type="text" id="name" required>
-              
-              <label for="email">Email:</label>
-              <input type="email" id="email" required>
-              
+              <input for="email" type="email" placeholder="Email..." name="email" required/>
               <label for="message">Message:</label>
               <textarea id="message" required></textarea>
-              
               <button type="submit">Submit</button>
+              <div>
+                <input type="checkbox" id="terms" required/>
+                <label for="terms">Sunt de acord cu termenii</label>
+              </div>
             </form>
-          </section>
+            
+        </span>
+        <div id="sugestii"></div>
+        <p class="actions">
+            <button id="add">Sugestie film</button>
+            <button id="remove">Stergere sugestie</button>
+            <span class="spacer"></span>
+        </p>
+        <span>
+            <span id="touchCount">0</span>
+            likes
+            <button id="touchButton">Imi place pagina</button>
+        </span>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
