@@ -1,3 +1,4 @@
+/* Default styles, elemente semantice, selectori, proprietati, unitati relative*/
 .titlu{
     margin-top:60px;
     font-family:"Lucida Console", "Courier New", monospace;
@@ -69,37 +70,65 @@
     font-size:medium;
 }
 
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555;
+}  
 main {
     display: grid;
     grid-gap: 20px;
-  }
+}
+
+  /* Media queries */
+@media screen and (max-width: 768px) {
+   header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
   
-  @media screen and (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px) {
     main {
       grid-template-columns: 1fr;
     }
-  }
+}
 
  /* Tranziții */
- button {
+button {
     transition: background-color 0.3s ease;
-  }
+}
   
   /* Animații */
-  @keyframes slideIn {
+@keyframes slideIn {
     0% {
       transform: translateX(-100%);
     }
     100% {
       transform: translateX(0);
     }
-  }
+}
   
-  section {
+section {
     animation: slideIn 0.5s ease;
-  }
-  
-  .meniu {
+}
+  /*Meniu drop-down + layout flex*/
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.meniu {
     color: whitesmoke;
     text-align: left;
     position:fixed;
@@ -139,3 +168,67 @@ main {
     width:150px;
     padding:5px;
 }
+
+/* Layout grid */
+footer section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+/*Pentru Javascript*/
+  .actions {
+    display: flex;
+  }
+  
+  .actions button:not(:last-child) {
+    margin-right: 4px;
+  }
+  
+  .actions .spacer {
+    flex: 1;
+  }
+  
+  .news-article {
+    border: 2px solid;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+  }
+  
+  .news-article img {
+    height: 100%;
+    max-width: 7rem;
+  }
+  
+  .news-article .content {
+    flex: 1;
+    margin-left: 1rem;
+  }
+  
+  .news-article .content h1 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .news-article .content p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .box h2 {
+    color: white;
+  }
+  
+  
