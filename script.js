@@ -5,7 +5,7 @@ sections.forEach(section => {
   section.style.backgroundColor = 'lightgray';
 });
 
-//Creare si stergere elemente + clasa Date + eveniment Mouse
+//Creare si stergere elemente + clasa Date
 const sugestii = [
     {
       title: "First Love",
@@ -30,10 +30,16 @@ const sugestii = [
   
   
 let Idx = 0;
-  
+//Eveniment mouse
 window.onload = () => {
   document.getElementById('add').onclick = addNews;
   document.getElementById('remove').onclick = removeNews;
+  const touchCountElement = document.getElementById('touchCount');
+  const button = document.getElementById('touchButton');
+  button.onclick = () => {
+    let count = parseInt(touchCountElement.innerHTML);
+    touchCountElement.innerHTML = count + 1;
+  };
 }
   
 function addNews() {
@@ -114,6 +120,7 @@ form.addEventListener('submit', (event) => {
     messageInput.value = '';
 });
 
+
 //Eveniment Tastatura
 window.addEventListener('keydown', function(event) {
   console.log('Tasta apasata:', event.key);
@@ -126,10 +133,8 @@ document.addEventListener('click', function(event) {
   
   console.log('Elementul pe care s-a produs click-ul:', elementClicked);
   console.log('Elementul la care s-a atașat ascultătorul de eveniment:', currentElement);
-});
-
-// Metodele getComputedStyle() și getBoundingClientRect()
-document.addEventListener('click', function(event) {
+  
+  // Metodele getComputedStyle() și getBoundingClientRect()
   var clickedElement = event.target;
   var containerElement = event.currentTarget;
 
@@ -149,4 +154,7 @@ document.addEventListener('click', function(event) {
     console.log('Poziție:', top, left);
   }
 });
+
+
+
 
