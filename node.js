@@ -7,6 +7,8 @@ const app = express();
 const port = 3000;
 app.use(express.static('.'));
 
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //cerere get pentru preluarea datelor din formular
 app.get('submit', (req, res) => {
@@ -29,7 +31,7 @@ app.get('formData.json', (req, res) => {
 });
 
 //Pagina Erori 404
-app.use((req, res, next) => {
+app.use((req, res) => {
     res.status(404).render('404');
 });
 
